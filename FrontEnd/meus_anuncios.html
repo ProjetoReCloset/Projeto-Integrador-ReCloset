@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meus anúncios - ReCloset</title>
+
+    <link rel="stylesheet" href="css/informacoes_perfil.css">
+    <link rel="stylesheet" href="css/mensagens.css">
+
+    <!-- Página privada: sem login, volta para a tela de login -->
+    <script src="js/api.js"></script>
+    <script>exigirLogin();</script>
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <!-- Cabeçalho -->
+        <header class="titulo-pagina">
+
+            <a href="perfil.html" class="botao-voltar" aria-label="Voltar para o perfil">
+
+                <svg viewBox="0 -960 960 960">
+                    <path d="M400-80 0-480l400-400 56 57-343 343 343 343-56 57Z"/>
+                </svg>
+
+            </a>
+
+            <div>
+                <h1>Meus anúncios</h1>
+                <p>Gerencie suas peças anunciadas.</p>
+            </div>
+
+        </header>
+
+
+        <!-- Mensagens -->
+        <div id="mensagem-anuncios" class="mensagem" role="alert"></div>
+
+
+        <!-- Nenhum anúncio -->
+        <section class="card-informacao escondido" id="sem-anuncios">
+            <p>Você ainda não anunciou nenhuma peça.</p>
+        </section>
+
+
+        <!-- Produtos (preenchido pelo JavaScript) -->
+        <section class="produtos-anuncios" id="lista-anuncios"></section>
+
+
+        <a href="vender.html" class="botao-principal">
+            + Criar novo anúncio
+        </a>
+
+    </main>
+
+    <script src="js/meus_anuncios.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,613 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4eff8;
+    color: #333;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.conteudo-carrinho {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 195px 20px 40px;
+}
+
+
+/* =========================
+   CARD DO CARRINHO
+========================= */
+
+.carrinho-container {
+    width: 100%;
+    max-width: 650px;
+
+    background-color: #fff;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(70, 35, 90, 0.12);
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.carrinho-titulo {
+    padding: 22px;
+
+    text-align: center;
+
+    border-bottom: 1px solid #eee;
+}
+
+.carrinho-titulo h1 {
+    color: #4d3b58;
+
+    font-size: 22px;
+}
+
+
+/* =========================
+   PRODUTOS
+========================= */
+
+.produto-carrinho {
+    min-height: 115px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 18px 22px;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+
+/* =========================
+   IMAGEM DO PRODUTO
+========================= */
+
+.produto-imagem {
+    width: 85px;
+    height: 85px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background-color: #eee5f7;
+}
+
+.produto-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   INFORMAÇÕES
+========================= */
+
+.produto-dados {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.produto-dados h2 {
+    color: #4d3b58;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+}
+
+.produto-dados p {
+    color: #777;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+}
+
+.produto-dados strong {
+    color: #6f3fa0;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   BOTÃO EXCLUIR
+========================= */
+
+.botao-excluir {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: transparent;
+
+    color: #999;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.botao-excluir svg {
+    width: 20px;
+    height: 20px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+}
+
+.botao-excluir:hover {
+    background-color: #f8edf8;
+
+    color: #7b4bab;
+}
+
+
+/* =========================
+   RESUMO DA COMPRA
+========================= */
+
+.resumo-compra {
+    padding: 25px;
+}
+
+
+/* LINHAS */
+
+.linha-resumo {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 7px 0;
+
+    color: #666;
+
+    font-size: 14px;
+}
+
+.linha-resumo strong {
+    color: #555;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   TOTAL
+========================= */
+
+.linha-total {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 12px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #e5e5e5;
+
+    color: #4d3b58;
+
+    font-size: 17px;
+
+    font-weight: bold;
+}
+
+.linha-total strong {
+    color: #6f3fa0;
+
+    font-size: 20px;
+}
+
+
+/* =========================
+   BOTÃO FINALIZAR
+========================= */
+
+.botao-finalizar {
+    width: 100%;
+
+    height: 48px;
+
+    margin-top: 22px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background-color: #7b4bab;
+
+    color: #fff;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.botao-finalizar:hover {
+    background-color: #63358e;
+}
+
+.botao-finalizar:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+/* =========================
+   CARRINHO DINÂMICO
+========================= */
+
+.carrinho-container .mensagem {
+    margin: 18px 22px 0;
+}
+
+.produto-dados a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.produto-dados a:hover {
+    text-decoration: underline;
+}
+
+/* Peça vendida para outra pessoa depois de entrar no carrinho */
+.produto-carrinho.indisponivel .produto-imagem img {
+    opacity: 0.5;
+}
+
+.produto-carrinho.indisponivel .produto-dados strong {
+    color: #999;
+    text-decoration: line-through;
+}
+
+.produto-dados .aviso-indisponivel {
+    margin-top: 4px;
+
+    color: #a12a3b;
+
+    font-weight: bold;
+}
+
+.resumo-compra[hidden] {
+    display: none;
+}
+
+.botao-finalizar:disabled {
+    background-color: #b9a3cf;
+
+    cursor: not-allowed;
+}
+
+.estado-lista {
+    padding: 45px 22px;
+
+    color: #777;
+
+    font-size: 15px;
+    text-align: center;
+}
+
+.estado-lista:empty {
+    display: none;
+}
+
+.estado-lista a {
+    color: #7b4bab;
+    font-weight: bold;
+}
+
+
+/* =========================
+   REVISÃO DO PEDIDO (finalizar_compra.html)
+========================= */
+
+.bloco-revisao {
+    padding: 18px 22px;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.bloco-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+.bloco-revisao h2 {
+    color: #4d3b58;
+
+    font-size: 15px;
+}
+
+.bloco-topo a {
+    color: #7b4bab;
+
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.bloco-topo a:hover {
+    text-decoration: underline;
+}
+
+.bloco-revisao p {
+    margin-top: 10px;
+
+    color: #666;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* pre-line: o endereço vem com quebras de linha */
+#texto-endereco {
+    white-space: pre-line;
+}
+
+.bloco-revisao p.sem-endereco {
+    color: #a12a3b;
+}
+
+.aviso-pagamento {
+    padding: 10px 12px;
+
+    border-radius: 9px;
+
+    background-color: #f4eff8;
+}
+
+#conteudo-revisao[hidden] {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+
+    
+
+    
+
+    
+
+
+    
+
+    
+
+    
+
+    
+
+
+    
+
+    
+
+    
+
+    
+
+
+    /* CONTEÚDO */
+
+    .conteudo-carrinho {
+        padding: 160px 15px 30px;
+    }
+
+    .carrinho-container {
+        max-width: 100%;
+
+        border-radius: 17px;
+    }
+}
+
+
+/* =========================
+   CELULAR PEQUENO
+========================= */
+
+@media (max-width: 480px) {
+
+    
+
+    
+
+    
+
+
+    
+
+    
+
+    
+
+    
+
+
+    
+
+    
+
+    
+
+    
+
+
+    /* CONTEÚDO */
+
+    .conteudo-carrinho {
+        padding: 145px 10px 25px;
+    }
+
+
+    /* CARD */
+
+    .carrinho-container {
+        border-radius: 15px;
+    }
+
+
+    /* TÍTULO */
+
+    .carrinho-titulo {
+        padding: 18px;
+    }
+
+    .carrinho-titulo h1 {
+        font-size: 20px;
+    }
+
+
+    /* PRODUTOS */
+
+    .produto-carrinho {
+        min-height: 100px;
+
+        gap: 10px;
+
+        padding: 15px;
+    }
+
+
+    /* IMAGEM */
+
+    .produto-imagem {
+        width: 70px;
+        height: 75px;
+    }
+
+
+    /* INFORMAÇÕES */
+
+    .produto-dados h2 {
+        font-size: 14px;
+
+        margin-bottom: 5px;
+    }
+
+    .produto-dados p {
+        font-size: 12px;
+
+        margin-bottom: 5px;
+    }
+
+    .produto-dados strong {
+        font-size: 14px;
+    }
+
+
+    /* EXCLUIR */
+
+    .botao-excluir {
+        width: 34px;
+        height: 34px;
+    }
+
+    .botao-excluir svg {
+        width: 18px;
+        height: 18px;
+    }
+
+
+    /* RESUMO */
+
+    .resumo-compra {
+        padding: 20px 15px;
+    }
+
+    .linha-resumo {
+        font-size: 13px;
+    }
+
+    .linha-resumo strong {
+        font-size: 13px;
+    }
+
+    .linha-total {
+        font-size: 16px;
+    }
+
+    .linha-total strong {
+        font-size: 18px;
+    }
+
+
+    /* FINALIZAR */
+
+    .botao-finalizar {
+        height: 45px;
+
+        font-size: 14px;
+    }
+
+}

@@ -1,0 +1,713 @@
+/* ==========================
+   CONFIGURAÇÕES GERAIS
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4eff8;
+    color: #333;
+}
+
+
+/* ==========================
+   CONTAINER DA PÁGINA
+========================== */
+
+.pagina {
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+
+/* ==========================
+   TÍTULO DA PÁGINA
+========================== */
+
+.titulo-pagina {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+.titulo-pagina h1 {
+    color: #5d3288;
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.titulo-pagina p {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* ==========================
+   BOTÃO VOLTAR
+========================== */
+
+.botao-voltar {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+}
+
+.botao-voltar svg {
+    width: 28px;
+    height: 28px;
+
+    fill: #7b4bab;
+
+    transition: 0.2s;
+}
+
+.botao-voltar:hover svg {
+    fill: #63358e;
+    transform: translateX(-3px);
+}
+
+
+/* ==========================
+   MEUS PEDIDOS
+========================== */
+
+.lista-pedidos {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.pedido {
+    background-color: white;
+
+    border-radius: 15px;
+    padding: 20px;
+
+    box-shadow: 0 5px 18px rgba(93, 50, 136, 0.08);
+}
+
+.pedido-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+.pedido-topo strong {
+    color: #444;
+}
+
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.entregue {
+    background-color: #e7f5e8;
+    color: #398244;
+}
+
+.andamento {
+    background-color: #fff3d6;
+    color: #9a6b00;
+}
+
+.pedido-produto {
+    display: flex;
+    gap: 15px;
+}
+
+.produto-imagem {
+    width: 90px;
+    height: 100px;
+
+    background-color: #eee8f3;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #999;
+    font-size: 12px;
+}
+
+.produto-info h2 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.produto-info p {
+    color: #7b4bab;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.produto-info small {
+    color: #888;
+}
+
+.botao-detalhes {
+    width: 100%;
+    height: 40px;
+
+    margin-top: 18px;
+
+    border: 1px solid #7b4bab;
+    border-radius: 8px;
+
+    background-color: white;
+    color: #7b4bab;
+
+    cursor: pointer;
+}
+
+
+/* Pedido recém-feito (ainda não enviado) */
+.confirmado {
+    background-color: #efe6f8;
+    color: #6f3fa0;
+}
+
+/* Foto real dentro da caixa da imagem */
+.produto-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+.estado-pedidos p {
+    margin: 0;
+
+    color: #666;
+
+    text-align: center;
+}
+
+.estado-pedidos a {
+    color: #7b4bab;
+    font-weight: bold;
+}
+
+.estado-pedidos[hidden],
+#conteudo-pedido[hidden] {
+    display: none;
+}
+
+/* ---------- Detalhes do pedido (pedido.html) ---------- */
+
+.itens-pedido {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.item-pedido {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.item-pedido .produto-imagem {
+    flex-shrink: 0;
+
+    width: 70px;
+    height: 70px;
+}
+
+.item-pedido .produto-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.item-pedido .produto-info h2 {
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.item-pedido .produto-info h2 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.item-pedido .produto-info h2 a:hover {
+    text-decoration: underline;
+}
+
+.item-pedido .produto-info p {
+    margin-bottom: 0;
+}
+
+.valores-pedido {
+    margin-top: 20px;
+    padding-top: 15px;
+
+    border-top: 1px solid #eee;
+}
+
+.valores-pedido div {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 5px 0;
+
+    color: #666;
+    font-size: 14px;
+}
+
+.valores-pedido .total {
+    margin-top: 6px;
+    padding-top: 12px;
+
+    border-top: 1px solid #eee;
+
+    color: #4d3b58;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.valores-pedido .total strong {
+    color: #6f3fa0;
+}
+
+.card-endereco-pedido {
+    margin-top: 18px;
+}
+
+#endereco-pedido {
+    white-space: pre-line;  /* o endereço vem com quebras de linha */
+    line-height: 1.6;
+}
+
+.aviso-simulado {
+    margin-top: 12px;
+    padding-top: 12px;
+
+    border-top: 1px solid #eee;
+
+    font-size: 13px;
+}
+
+
+/* ==========================
+   MEUS ANÚNCIOS
+========================== */
+
+.produtos-anuncios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.anuncio {
+    background-color: white;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 18px rgba(93, 50, 136, 0.08);
+}
+
+.anuncio-imagem {
+    height: 180px;
+
+    background-color: #eee8f3;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #999;
+    font-size: 12px;
+
+    margin-bottom: 12px;
+}
+
+.anuncio-info h2 {
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+.anuncio-info p {
+    color: #7b4bab;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.anuncio-status {
+    color: #398244;
+    font-size: 13px;
+}
+
+/* Foto real do anúncio dentro da caixa cinza */
+.anuncio-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+.anuncio-status.vendido {
+    color: #888;
+}
+
+.anuncio-aviso {
+    margin-top: 15px;
+
+    color: #888;
+    font-size: 13px;
+}
+
+.anuncio .botao-remover {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 10px;
+
+    font-size: 14px;
+}
+
+.anuncio .botao-remover:hover {
+    text-decoration: underline;
+}
+
+.botao-editar {
+    width: 100%;
+    height: 38px;
+
+    margin-top: 15px;
+
+    border: 1px solid #7b4bab;
+    border-radius: 8px;
+
+    background-color: white;
+    color: #7b4bab;
+
+    cursor: pointer;
+}
+
+.botao-principal {
+    display: block;
+
+    width: 100%;
+    height: 45px;
+
+    margin-top: 25px;
+
+    border: none;
+    border-radius: 9px;
+
+    background-color: #7b4bab;
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    text-align: center;
+    text-decoration: none;
+
+    line-height: 45px;
+
+    cursor: pointer;
+}
+
+
+/* ==========================
+   ENDEREÇOS
+========================== */
+
+.card-informacao {
+    background-color: white;
+
+    padding: 22px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 18px rgba(93, 50, 136, 0.08);
+}
+
+.card-cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+.icone-card svg {
+    width: 25px;
+    height: 25px;
+
+    fill: #7b4bab;
+}
+
+.card-informacao p {
+    color: #666;
+    margin-bottom: 6px;
+}
+
+
+/* Formulário de endereço (mesmo estilo dos campos de Editar perfil) */
+
+.escondido {
+    display: none !important;
+}
+
+.mensagem {
+    margin-bottom: 20px;
+}
+
+.form-endereco {
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.form-endereco .campo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.form-endereco label {
+    color: #4d3b58;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-endereco input,
+.form-endereco select {
+    width: 100%;
+    height: 45px;
+
+    padding: 0 14px;
+
+    border: 1px solid #d6c9df;
+    border-radius: 9px;
+
+    background-color: #fff;
+    color: #333;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.form-endereco input::placeholder {
+    color: #aaa;
+}
+
+.form-endereco input:focus,
+.form-endereco select:focus {
+    border-color: #7b4bab;
+
+    box-shadow: 0 0 0 3px rgba(123, 75, 171, 0.12);
+}
+
+/* Dois campos lado a lado (ex.: Número + Complemento) */
+.linha-campos {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    gap: 14px;
+}
+
+.linha-campos:has(.campo-estado) {
+    grid-template-columns: 3fr 1fr;
+}
+
+.form-endereco .botao-principal,
+.form-endereco .botao-editar {
+    margin-top: 0;
+}
+
+/* Botão de excluir o endereço, abaixo do "Editar endereço" */
+.botao-excluir-endereco {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 12px;
+
+    font-size: 14px;
+}
+
+.botao-excluir-endereco:hover {
+    text-decoration: underline;
+}
+
+#sem-endereco p {
+    text-align: center;
+}
+
+
+/* ==========================
+   FORMAS DE PAGAMENTO
+========================== */
+
+.card-pagamento {
+    background-color: white;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    box-shadow: 0 5px 18px rgba(93, 50, 136, 0.08);
+}
+
+.icone-cartao svg {
+    width: 35px;
+    height: 35px;
+
+    fill: #7b4bab;
+}
+
+.pagamento-info {
+    flex: 1;
+}
+
+.pagamento-info strong {
+    display: block;
+    margin-bottom: 7px;
+}
+
+.pagamento-info p {
+    color: #777;
+}
+
+.botao-remover {
+    border: none;
+    background: none;
+
+    color: #c44;
+
+    cursor: pointer;
+}
+
+
+/* ==========================
+   AJUDA E SUPORTE
+========================== */
+
+.lista-ajuda {
+    background-color: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 18px rgba(93, 50, 136, 0.08);
+}
+
+.item-ajuda {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    text-decoration: none;
+    color: #444;
+
+    border-bottom: 1px solid #eee;
+}
+
+.item-ajuda:last-child {
+    border-bottom: none;
+}
+
+.icone-ajuda svg {
+    width: 24px;
+    height: 24px;
+
+    fill: #7b4bab;
+}
+
+.item-ajuda span:nth-child(2) {
+    flex: 1;
+}
+
+.seta {
+    font-size: 25px;
+    color: #aaa;
+}
+
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+
+@media (max-width: 600px) {
+
+    .linha-campos,
+    .linha-campos:has(.campo-estado) {
+        grid-template-columns: 1fr;
+    }
+
+    .pagina {
+        width: 92%;
+        margin: 25px auto;
+    }
+
+    .titulo-pagina h1 {
+        font-size: 22px;
+    }
+
+    .produtos-anuncios {
+        grid-template-columns: 1fr;
+    }
+
+    .anuncio-imagem {
+        height: 220px;
+    }
+
+    .card-pagamento {
+        flex-wrap: wrap;
+    }
+
+    .botao-remover {
+        width: 100%;
+        text-align: right;
+    }
+}

@@ -1,0 +1,37 @@
+/* =========================
+   MENSAGENS DE ERRO / SUCESSO
+   (compartilhado entre as páginas com formulário)
+========================= */
+
+.mensagem {
+    display: none;
+
+    padding: 12px 14px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.mensagem.visivel {
+    display: block;
+}
+
+.mensagem.erro {
+    background-color: #fdecee;
+    border: 1px solid #f3b8c0;
+    color: #a12a3b;
+}
+
+.mensagem.sucesso {
+    background-color: #ecf7ee;
+    border: 1px solid #b7dfbf;
+    color: #2d6b39;
+}
+
+/* Botão enquanto a requisição está em andamento */
+button:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}

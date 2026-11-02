@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do pedido - ReCloset</title>
+
+    <link rel="stylesheet" href="css/informacoes_perfil.css">
+    <link rel="stylesheet" href="css/mensagens.css">
+
+    <!-- Página privada: sem login, volta para a tela de login -->
+    <script src="js/api.js"></script>
+    <script>exigirLogin();</script>
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <!-- Cabeçalho -->
+        <header class="titulo-pagina">
+
+            <a href="meus_pedidos.html" class="botao-voltar" aria-label="Voltar para meus pedidos">
+
+                <svg viewBox="0 -960 960 960" aria-hidden="true">
+                    <path d="M400-80 0-480l400-400 56 57-343 343 343 343-56 57Z"/>
+                </svg>
+
+            </a>
+
+            <div>
+                <h1 id="titulo-pedido">Pedido</h1>
+                <p id="data-pedido">Detalhes da sua compra.</p>
+            </div>
+
+        </header>
+
+
+        <!-- Confirmação logo após a compra -->
+        <div id="mensagem-pedido" class="mensagem" role="alert"></div>
+
+        <section class="card-informacao estado-pedidos" id="estado-pedido">
+            <p id="texto-estado-pedido">Carregando pedido...</p>
+        </section>
+
+
+        <div id="conteudo-pedido" hidden>
+
+            <!-- ITENS -->
+            <section class="pedido">
+
+                <div class="pedido-topo">
+                    <strong id="qtd-itens">Itens</strong>
+                    <span class="status" id="status-pedido"></span>
+                </div>
+
+                <div class="itens-pedido" id="itens-pedido"></div>
+
+                <div class="valores-pedido">
+                    <div><span>Subtotal</span><strong id="valor-subtotal"></strong></div>
+                    <div><span>Frete</span><strong id="valor-entrega"></strong></div>
+                    <div class="total"><span>Total</span><strong id="valor-total"></strong></div>
+                </div>
+
+            </section>
+
+
+            <!-- ENDEREÇO (cópia gravada no momento da compra) -->
+            <section class="card-informacao card-endereco-pedido">
+
+                <div class="card-cabecalho">
+                    <div class="icone-card">
+                        <svg viewBox="0 -960 960 960">
+                            <path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 400Q309-225 194.5-370T80-640q0-150 96.5-235T480-960q207 0 303.5 85T880-640q0 125-114.5 270T480-80Z"/>
+                        </svg>
+                    </div>
+                    <strong>Endereço de entrega</strong>
+                </div>
+
+                <p id="endereco-pedido"></p>
+
+                <p class="aviso-simulado">Pagamento simulado: nenhum valor foi cobrado.</p>
+
+            </section>
+
+            <a href="ver_mais.html" class="botao-principal">Continuar comprando</a>
+
+        </div>
+
+    </main>
+
+    <script src="js/pedido.js"></script>
+
+</body>
+</html>

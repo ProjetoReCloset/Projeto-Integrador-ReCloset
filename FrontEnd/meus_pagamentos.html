@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formas de pagamento - ReCloset</title>
+
+    <link rel="stylesheet" href="css/informacoes_perfil.css">
+
+    <!-- Página privada: sem login, volta para a tela de login -->
+    <script src="js/api.js"></script>
+    <script>exigirLogin();</script>
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <!-- Cabeçalho -->
+        <header class="titulo-pagina">
+
+            <a href="perfil.html" class="botao-voltar" aria-label="Voltar para o perfil">
+
+                <svg viewBox="0 -960 960 960">
+                    <path d="M400-80 0-480l400-400 56 57-343 343 343 343-56 57Z"/>
+                </svg>
+
+            </a>
+
+            <div>
+                <h1>Formas de pagamento</h1>
+                <p>Como funcionam os pagamentos.</p>
+            </div>
+
+        </header>
+
+
+        <!-- Aviso: pagamento simulado (nenhum cartão é cadastrado) -->
+        <section class="card-informacao">
+
+            <div class="card-cabecalho">
+
+                <div class="icone-card">
+                    <svg viewBox="0 -960 960 960">
+                        <path d="M880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720Zm-720 80h640v-80H160v80Zm0 160v240h640v-240H160Zm0 240v-240 240Z"/>
+                    </svg>
+                </div>
+
+                <strong>Pagamento simulado</strong>
+
+            </div>
+
+            <p>
+                O ReCloset é um projeto acadêmico: as compras são finalizadas
+                sem nenhuma cobrança real.
+            </p>
+
+            <p>
+                Por segurança, nenhum dado de cartão é pedido nem guardado.
+            </p>
+
+        </section>
+
+
+        <a href="meus_pedidos.html" class="botao-principal">
+            Ver meus pedidos
+        </a>
+
+    </main>
+
+</body>
+</html>

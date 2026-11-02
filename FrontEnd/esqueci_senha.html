@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ReCloset - Esqueci minha senha</title>
+
+    <link rel="stylesheet" href="css/esquecisenha.css">
+    <link rel="stylesheet" href="css/mensagens.css">
+</head>
+
+<body>
+
+    <main class="pagina-esqueci-senha">
+
+        <section class="senha-container">
+
+            <header class="logo-container">
+                <img 
+                    src="img/logo.png" 
+                    alt="Logo do ReCloset" 
+                    class="logo-img"
+                >
+            </header>
+
+            <div class="senha-content">
+
+                <header class="senha-header">
+                    <h1>Esqueceu sua senha?</h1>
+                    <p>
+                        Digite seu e-mail para receber um link de redefinição de senha.
+                    </p>
+                </header>
+
+                <form class="senha-form">
+
+                    <!-- Mensagens aparecem aqui -->
+                    <div id="mensagem-senha" class="mensagem" role="alert"></div>
+
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+
+                        <input 
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Digite seu e-mail"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="button-link">
+                        Receber link de redefinição
+                    </button>
+
+                </form>
+
+                <footer class="voltar-login">
+
+                    <span>Lembrou da sua senha?</span>
+
+                    <a href="index.html">
+                        Entrar
+                    </a>
+
+                </footer>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/esqueci_senha.js"></script>
+
+</body>
+
+</html>
+

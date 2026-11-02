@@ -1,0 +1,441 @@
+
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4eff8;
+    color: #333;
+    min-height: 100vh;
+}
+
+
+/* Conteúdo principal */
+.conteudo {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+    padding: 195px 0 45px;
+}
+
+.cabecalho-produtos {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.subtitulo {
+    color: #7b4bab;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.cabecalho-produtos h1 {
+    color: #5d3288;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.descricao {
+    color: #777;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Botão voltar com ícone */
+.botao-voltar {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d6c9df;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #7b4bab;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.botao-voltar svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.botao-voltar:hover {
+    background-color: #7b4bab;
+    color: #fff;
+    transform: translateX(-2px);
+}
+
+/* Filtros por categoria */
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.filtro {
+    padding: 10px 19px;
+    border: 1px solid #d8c7e8;
+    border-radius: 22px;
+    background-color: #fff;
+    color: #63358e;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.filtro:hover,
+.filtro.ativo {
+    background-color: #7b4bab;
+    border-color: #7b4bab;
+    color: #fff;
+}
+
+/* Grade de produtos */
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 23px;
+}
+
+.produto {
+    min-width: 0;
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid #eee5f7;
+    border-radius: 15px;
+    box-shadow: 0 4px 13px rgba(70, 40, 90, 0.07);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.produto:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(70, 40, 90, 0.12);
+}
+
+.foto {
+    height: 230px;
+    position: relative;
+    overflow: hidden;
+    background-color: #eee5f7;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Botão de coração */
+.coracao {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 37px;
+    height: 37px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #7b4bab;
+    font-size: 27px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* Informações dos produtos */
+.dados {
+    padding: 16px;
+}
+
+.categoria {
+    color: #8b68a7;
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.dados h2 {
+    color: #4d3b58;
+    font-size: 17px;
+    line-height: 1.35;
+    margin-bottom: 6px;
+}
+
+.tamanho {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.preco {
+    color: #5d3288;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.botao {
+    display: block;
+    width: 100%;
+    padding: 11px;
+    border-radius: 8px;
+    background-color: #7b4bab;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.botao:hover {
+    background-color: #63358e;
+}
+
+.aviso {
+    margin-top: 25px;
+    color: #888;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Ajustes para tablets */
+/* ==========================
+   BUSCA, FILTROS E ORDENAÇÃO
+========================== */
+
+.escondido {
+    display: none !important;
+}
+
+.resumo-busca {
+    margin: -10px 0 20px;
+
+    color: #4d3b58;
+    font-size: 15px;
+}
+
+.resumo-busca a {
+    margin-left: 8px;
+
+    color: #7b4bab;
+    font-weight: bold;
+}
+
+.barra-catalogo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-bottom: 28px;
+}
+
+/* a margem de baixo agora é da barra inteira */
+.barra-catalogo .filtros {
+    margin-bottom: 0;
+}
+
+.ordenar {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #4d3b58;
+    font-size: 14px;
+}
+
+.ordenar select {
+    height: 38px;
+
+    padding: 0 12px;
+
+    border: 1px solid #d6c9df;
+    border-radius: 20px;
+
+    background-color: #fff;
+    color: #4d3b58;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+    cursor: pointer;
+    outline: none;
+}
+
+.ordenar select:focus {
+    border-color: #7b4bab;
+}
+
+.estado-lista {
+    padding: 40px 20px;
+
+    color: #777;
+
+    font-size: 15px;
+    text-align: center;
+}
+
+.estado-lista:empty {
+    display: none;
+}
+
+.estado-lista a {
+    color: #7b4bab;
+    font-weight: bold;
+}
+
+.dados h2 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+@media (max-width: 1000px) {
+    .produtos {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    
+}
+
+/* Ajustes para celulares */
+@media (max-width: 768px) {
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    .conteudo {
+        width: 92%;
+        padding-top: 165px;
+    }
+
+    .cabecalho-produtos {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .cabecalho-produtos h1 {
+        font-size: 28px;
+    }
+
+    .produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .foto {
+        height: 210px;
+    }
+
+    .dados {
+        padding: 13px;
+    }
+
+    .botao-voltar {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+/* Ajustes para celulares menores */
+@media (max-width: 480px) {
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    .conteudo {
+        padding-top: 150px;
+    }
+
+    .cabecalho-produtos h1 {
+        font-size: 25px;
+    }
+
+    .descricao {
+        font-size: 14px;
+    }
+
+    .filtros {
+        gap: 7px;
+    }
+
+    .filtro {
+        padding: 9px 13px;
+        font-size: 12px;
+    }
+
+    .produtos {
+        gap: 10px;
+    }
+
+    .foto {
+        height: 165px;
+    }
+
+    .dados {
+        padding: 10px;
+    }
+
+    .dados h2 {
+        font-size: 14px;
+    }
+
+    .preco {
+        font-size: 17px;
+    }
+
+    .botao {
+        padding: 10px 6px;
+        font-size: 12px;
+    }
+}
+
+
+/* Coração escondido (nos anúncios da própria pessoa) */
+.coracao[hidden] {
+    display: none;
+}
+
+/* Coração cheio: produto está nos favoritos */
+.coracao.favoritado {
+    color: #7b4bab;
+}

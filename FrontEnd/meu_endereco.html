@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Endereços - ReCloset</title>
+
+    <link rel="stylesheet" href="css/informacoes_perfil.css">
+    <link rel="stylesheet" href="css/mensagens.css">
+
+    <!-- Página privada: sem login, volta para a tela de login -->
+    <script src="js/api.js"></script>
+    <script>exigirLogin();</script>
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <!-- Cabeçalho -->
+        <header class="titulo-pagina">
+
+            <a href="perfil.html" class="botao-voltar" aria-label="Voltar para o perfil">
+
+                <svg viewBox="0 -960 960 960">
+                    <path d="M400-80 0-480l400-400 56 57-343 343 343 343-56 57Z"/>
+                </svg>
+
+            </a>
+
+            <div>
+                <h1>Endereço</h1>
+                <p>Gerencie seu endereço de entrega.</p>
+            </div>
+
+        </header>
+
+
+        <!-- Mensagens de erro / sucesso -->
+        <div id="mensagem-endereco" class="mensagem" role="alert"></div>
+
+
+        <!-- Endereço cadastrado (preenchido pelo JavaScript) -->
+        <section class="card-informacao escondido" id="card-endereco">
+
+            <div class="card-cabecalho">
+
+                <div class="icone-card">
+                    <svg viewBox="0 -960 960 960">
+                        <path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 400Q309-225 194.5-370T80-640q0-150 96.5-235T480-960q207 0 303.5 85T880-640q0 125-114.5 270T480-80Z"/>
+                    </svg>
+                </div>
+
+                <strong>Endereço</strong>
+
+            </div>
+
+            <p id="linha-rua"></p>
+            <p id="linha-cidade"></p>
+            <p id="linha-cep"></p>
+
+            <button type="button" class="botao-editar" id="botao-editar-endereco">
+                Editar endereço
+            </button>
+
+            <button type="button" class="botao-remover botao-excluir-endereco" id="botao-excluir-endereco">
+                Excluir endereço
+            </button>
+
+        </section>
+
+
+        <!-- Nenhum endereço cadastrado -->
+        <section class="card-informacao escondido" id="sem-endereco">
+
+            <p>Você ainda não cadastrou um endereço de entrega.</p>
+
+            <button type="button" class="botao-principal" id="botao-novo-endereco">
+                + Cadastrar endereço
+            </button>
+
+        </section>
+
+
+        <!-- Formulário (cadastrar ou editar) -->
+        <form class="card-informacao form-endereco escondido" id="form-endereco" novalidate>
+
+            <div class="campo">
+                <label for="cep">CEP</label>
+                <input type="text" id="cep" name="cep" placeholder="00000-000"
+                       inputmode="numeric" maxlength="9" autocomplete="postal-code" required>
+            </div>
+
+            <div class="campo">
+                <label for="rua">Rua</label>
+                <input type="text" id="rua" name="rua" placeholder="Ex: Rua das Flores"
+                       maxlength="150" autocomplete="address-line1" required>
+            </div>
+
+            <div class="linha-campos">
+
+                <div class="campo">
+                    <label for="numero">Número</label>
+                    <input type="text" id="numero" name="numero" placeholder="Ex: 123 ou S/N"
+                           maxlength="10" required>
+                </div>
+
+                <div class="campo">
+                    <label for="complemento">Complemento (opcional)</label>
+                    <input type="text" id="complemento" name="complemento" placeholder="Ex: Apto 12"
+                           maxlength="100" autocomplete="address-line2">
+                </div>
+
+            </div>
+
+            <div class="campo">
+                <label for="bairro">Bairro</label>
+                <input type="text" id="bairro" name="bairro" placeholder="Ex: Centro"
+                       maxlength="100" required>
+            </div>
+
+            <div class="linha-campos">
+
+                <div class="campo">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" name="cidade" placeholder="Ex: Matão"
+                           maxlength="100" autocomplete="address-level2" required>
+                </div>
+
+                <div class="campo campo-estado">
+                    <label for="estado">Estado</label>
+                    <select id="estado" name="estado" required>
+                        <option value="">UF</option>
+                        <option value="AC">AC</option>
+                        <option value="AL">AL</option>
+                        <option value="AP">AP</option>
+                        <option value="AM">AM</option>
+                        <option value="BA">BA</option>
+                        <option value="CE">CE</option>
+                        <option value="DF">DF</option>
+                        <option value="ES">ES</option>
+                        <option value="GO">GO</option>
+                        <option value="MA">MA</option>
+                        <option value="MT">MT</option>
+                        <option value="MS">MS</option>
+                        <option value="MG">MG</option>
+                        <option value="PA">PA</option>
+                        <option value="PB">PB</option>
+                        <option value="PR">PR</option>
+                        <option value="PE">PE</option>
+                        <option value="PI">PI</option>
+                        <option value="RJ">RJ</option>
+                        <option value="RN">RN</option>
+                        <option value="RS">RS</option>
+                        <option value="RO">RO</option>
+                        <option value="RR">RR</option>
+                        <option value="SC">SC</option>
+                        <option value="SP">SP</option>
+                        <option value="SE">SE</option>
+                        <option value="TO">TO</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button type="submit" class="botao-principal">
+                Salvar endereço
+            </button>
+
+            <button type="button" class="botao-editar" id="botao-cancelar">
+                Cancelar
+            </button>
+
+        </form>
+
+    </main>
+
+    <script src="js/meu_endereco.js"></script>
+
+</body>
+</html>

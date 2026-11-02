@@ -1,0 +1,460 @@
+/* ==================== RESET ==================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==================== BODY ==================== */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f4eff8;
+
+    color: #333;
+
+    min-height: 100vh;
+}
+
+
+/* ITENS */
+
+
+/* ÍCONES */
+
+
+/* HOVER */
+
+
+/* ==================== CONTEÚDO ==================== */
+
+.conteudo {
+    width: 100%;
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    padding: 195px 20px 50px;
+}
+
+
+/* ==================== FORMULÁRIO ==================== */
+
+.formulario-venda {
+    width: 100%;
+
+    background-color: #fff;
+
+    border: 1px solid #e5d4f5;
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    box-shadow: 0 3px 12px rgba(93, 50, 136, 0.08);
+}
+
+
+/* TÍTULO */
+
+.formulario-venda h1 {
+    margin-bottom: 25px;
+
+    text-align: center;
+
+    color: #5d3288;
+
+    font-size: 27px;
+}
+
+
+/* ==================== FOTO ==================== */
+
+.foto-peca {
+    width: 100%;
+
+    margin-bottom: 25px;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+.foto-peca label {
+    width: 180px;
+    height: 130px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border: 2px dashed #d6c9df;
+
+    border-radius: 10px;
+
+    background-color: #f4eff8;
+
+    color: #7b4bab;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.foto-peca label:hover {
+    background-color: #eee5f7;
+
+    border-color: #7b4bab;
+}
+
+
+.foto-peca svg {
+    width: 35px;
+    height: 35px;
+
+    fill: #7b4bab;
+}
+
+
+.foto-peca span {
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* ESCONDE O INPUT ORIGINAL */
+
+.foto-peca input {
+    display: none;
+}
+
+
+/* ==================== MINIATURAS DAS FOTOS ==================== */
+
+.previews-fotos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+
+    margin-bottom: 10px;
+}
+
+.previews-fotos:empty {
+    display: none;
+}
+
+.preview-foto {
+    position: relative;
+
+    aspect-ratio: 1;
+
+    overflow: hidden;
+
+    border: 1px solid #e5d4f5;
+    border-radius: 10px;
+
+    background-color: #f4eff8;
+}
+
+.preview-foto img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+/* Botão "x" para remover a foto */
+.remover-foto {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    width: 24px;
+    height: 24px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.92);
+    color: #7b4bab;
+
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+
+    cursor: pointer;
+}
+
+.remover-foto:hover {
+    background-color: #7b4bab;
+    color: #fff;
+}
+
+.dica-fotos {
+    margin-bottom: 22px;
+
+    color: #777;
+
+    font-size: 13px;
+    text-align: center;
+}
+
+/* Espaço entre a mensagem de erro e o resto do formulário */
+.formulario-venda .mensagem {
+    margin-bottom: 20px;
+}
+
+
+/* ==================== CAMPOS ==================== */
+
+.campo {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 18px;
+}
+
+
+.campo label {
+    margin-bottom: 7px;
+
+    color: #5d3288;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #d6c9df;
+
+    border-radius: 7px;
+
+    background-color: #fff;
+
+    color: #333;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: #7b4bab;
+}
+
+
+/* DESCRIÇÃO */
+
+.campo textarea {
+    height: 110px;
+
+    resize: vertical;
+}
+
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #aaa;
+}
+
+
+/* ==================== BOTÃO PUBLICAR ==================== */
+
+.botao-publicar {
+    width: 100%;
+
+    height: 45px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #7b4bab;
+
+    color: #fff;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.botao-publicar:hover {
+    background-color: #63358e;
+}
+
+
+/* ==================== RESPONSIVIDADE ==================== */
+
+@media (max-width: 768px) {
+
+    
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+    
+
+
+    
+
+
+    
+
+
+    /* CONTEÚDO */
+
+    .conteudo {
+        padding: 160px 15px 35px;
+    }
+
+
+    .formulario-venda {
+        padding: 25px 20px;
+    }
+
+
+    .formulario-venda h1 {
+        font-size: 24px;
+    }
+
+}
+
+
+/* ==================== CELULAR PEQUENO ==================== */
+
+@media (max-width: 480px) {
+
+    .previews-fotos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+    
+
+
+    
+
+
+    
+
+
+    /* CONTEÚDO */
+
+    .conteudo {
+        padding: 145px 10px 30px;
+    }
+
+
+    .formulario-venda {
+        padding: 20px 15px;
+
+        border-radius: 12px;
+    }
+
+
+    .formulario-venda h1 {
+        font-size: 21px;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* FOTO */
+
+    .foto-peca label {
+        width: 160px;
+        height: 110px;
+    }
+
+
+    /* CAMPOS */
+
+    .campo label {
+        font-size: 13px;
+    }
+
+
+    .campo input,
+    .campo select,
+    .campo textarea {
+        font-size: 13px;
+
+        padding: 10px;
+    }
+
+
+    .campo textarea {
+        height: 95px;
+    }
+
+
+    /* BOTÃO */
+
+    .botao-publicar {
+        height: 42px;
+
+        font-size: 14px;
+    }
+
+}

@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4eff8;
+    color: #333;
+}
+
+
+/* Centraliza a tela */
+
+.pagina-redefinir {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* Caixa principal */
+
+.redefinir-container {
+    width: 100%;
+    max-width: 420px;
+
+    background-color: #fff;
+
+    padding: 35px 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(70, 35, 90, 0.15);
+}
+
+
+/* Logo */
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.logo-img {
+    width: 110px;
+    height: 110px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+
+/* Título */
+
+.redefinir-header {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.redefinir-header h1 {
+    color: #6f3fa0;
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+.redefinir-header p {
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* Formulário */
+
+.redefinir-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* Campos */
+
+.campo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.campo label {
+    color: #4d3b58;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.campo input {
+    width: 100%;
+    height: 45px;
+
+    padding: 0 14px;
+
+    border: 1px solid #d6c9df;
+
+    border-radius: 9px;
+
+    background-color: #fff;
+
+    color: #333;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.campo input::placeholder {
+    color: #aaa;
+}
+
+.campo input:focus {
+    border-color: #7b4bab;
+
+    box-shadow: 0 0 0 3px rgba(123, 75, 171, 0.12);
+}
+
+
+/* Botão */
+
+.button-confirmar {
+    width: 100%;
+    height: 45px;
+
+    margin-top: 3px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background-color: #7b4bab;
+
+    color: #fff;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.button-confirmar:hover {
+    background-color: #63358e;
+}
+
+.button-confirmar:active {
+    transform: scale(0.98);
+}
+
+
+/* Responsividade */
+
+@media (max-width: 480px) {
+
+    .redefinir-container {
+        padding: 30px 22px;
+    }
+
+    .logo-img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .redefinir-header h1 {
+        font-size: 22px;
+    }
+}

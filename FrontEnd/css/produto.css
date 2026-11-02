@@ -1,0 +1,414 @@
+
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4eff8;
+    color: #333;
+    min-height: 100vh;
+}
+
+
+/* Conteúdo principal */
+.conteudo {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+    padding: 195px 0 45px;
+}
+
+.cabecalho-produtos {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.subtitulo {
+    color: #7b4bab;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.cabecalho-produtos h1 {
+    color: #5d3288;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.descricao {
+    color: #777;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Botão voltar com ícone */
+.botao-voltar {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d6c9df;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #7b4bab;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.botao-voltar svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.botao-voltar:hover {
+    background-color: #7b4bab;
+    color: #fff;
+    transform: translateX(-2px);
+}
+
+/* ==========================
+   DETALHES DO PRODUTO
+========================== */
+
+.escondido {
+    display: none !important;
+}
+
+.subtitulo a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.subtitulo a:hover {
+    text-decoration: underline;
+}
+
+.estado-lista {
+    padding: 40px 20px;
+
+    color: #777;
+
+    font-size: 15px;
+    text-align: center;
+}
+
+.estado-lista:empty {
+    display: none;
+}
+
+.estado-lista a {
+    color: #7b4bab;
+    font-weight: bold;
+}
+
+/* Cartão branco com foto de um lado e informações do outro */
+.detalhe {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+
+    gap: 40px;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    background-color: #fff;
+
+    box-shadow: 0 5px 15px rgba(70, 35, 90, 0.08);
+}
+
+
+/* GALERIA */
+
+.foto-principal {
+    aspect-ratio: 1;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background-color: #f4eff8;
+}
+
+.foto-principal img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.miniaturas {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 12px;
+}
+
+.miniatura {
+    width: 70px;
+    height: 70px;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    border: 2px solid transparent;
+    border-radius: 10px;
+
+    background-color: #f4eff8;
+
+    cursor: pointer;
+}
+
+.miniatura img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.miniatura.ativa,
+.miniatura:hover {
+    border-color: #7b4bab;
+}
+
+
+/* INFORMAÇÕES */
+
+.info-produto {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.categoria-detalhe {
+    color: #7b4bab;
+
+    font-size: 14px;
+}
+
+.info-produto h1 {
+    color: #5d3288;
+
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.preco-detalhe {
+    color: #6f3fa0;
+
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.etiquetas {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+/* Mesmo formato dos botões de filtro */
+.etiqueta {
+    padding: 7px 15px;
+
+    border: 1px solid #d8c7e8;
+    border-radius: 22px;
+
+    background-color: #fff;
+    color: #63358e;
+
+    font-size: 13px;
+}
+
+.etiqueta.disponivel {
+    border-color: #b7dfbf;
+
+    background-color: #ecf7ee;
+    color: #2d6b39;
+}
+
+.etiqueta.vendido {
+    border-color: #ddd;
+
+    background-color: #f1f1f1;
+    color: #777;
+}
+
+.info-produto h2 {
+    margin-top: 6px;
+
+    color: #4d3b58;
+
+    font-size: 16px;
+}
+
+/* pre-line: respeita as quebras de linha que o vendedor digitou */
+.texto-descricao {
+    color: #555;
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+.vendedor {
+    padding: 14px 16px;
+
+    border-radius: 12px;
+
+    background-color: #f4eff8;
+    color: #4d3b58;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Botões de ação (editar, favoritar, carrinho) */
+.acoes-produto {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.acoes-produto:empty {
+    display: none;
+}
+
+.aviso-acao {
+    color: #777;
+
+    font-size: 14px;
+}
+
+.botao-acao {
+    display: block;
+
+    width: 100%;
+
+    padding: 13px 10px;
+
+    border: none;
+    border-radius: 9px;
+
+    background-color: #7b4bab;
+    color: #fff;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.botao-acao:hover {
+    background-color: #63358e;
+}
+
+.botao-acao.secundario {
+    border: 1px solid #7b4bab;
+
+    background-color: #fff;
+    color: #7b4bab;
+}
+
+.botao-acao.secundario:hover {
+    background-color: #f4eff8;
+}
+
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+
+
+@media (max-width: 768px) {
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    .conteudo {
+        width: 92%;
+        padding-top: 165px;
+    }
+
+    .botao-voltar {
+        width: 42px;
+        height: 42px;
+    }
+
+    /* Foto em cima, informações embaixo */
+    .detalhe {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 18px;
+    }
+
+    .info-produto h1 {
+        font-size: 25px;
+    }
+
+    .preco-detalhe {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    .conteudo {
+        padding-top: 150px;
+    }
+
+    .miniatura {
+        width: 58px;
+        height: 58px;
+    }
+}

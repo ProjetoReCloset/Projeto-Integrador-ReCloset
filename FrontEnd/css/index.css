@@ -1,0 +1,345 @@
+
+/* ==========================
+   CONFIGURAÇÕES GERAIS
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4eff8;
+    color: #333;
+}
+
+
+/* ==========================
+   PÁGINA DE LOGIN
+========================== */
+
+.pagina-login {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* ==========================
+   CONTAINER DO LOGIN
+========================== */
+
+.login-container {
+    width: 100%;
+    max-width: 420px;
+
+    background-color: #ffffff;
+
+    padding: 35px 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(70, 35, 90, 0.15);
+}
+
+
+/* ==========================
+   LOGO
+========================== */
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.logo-img {
+    width: 120px;
+    height: 120px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+
+/* ==========================
+   CABEÇALHO
+========================== */
+
+.login-header {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.login-header h1 {
+    color: #6f3fa0;
+
+    font-size: 28px;
+
+    margin-bottom: 8px;
+}
+
+.login-header p {
+    color: #777;
+
+    font-size: 14px;
+}
+
+/* ==========================
+   FORMULÁRIO
+========================== */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.campo label {
+    color: #4d3b58;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.campo input {
+    width: 100%;
+    height: 45px;
+    padding: 0 14px;
+    border: 1px solid #d6c9df;
+    border-radius: 9px;
+    background-color: #ffffff;
+    color: #333;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+
+    /* Garante que o padding não aumente a largura */
+    box-sizing: border-box;
+}
+
+.campo input::placeholder {
+    color: #aaa;
+}
+
+.campo input:focus {
+    border-color: #7b4bab;
+    box-shadow: 0 0 0 3px rgba(123, 75, 171, 0.12);
+}
+
+
+/* ==========================
+   BOTÃO ENTRAR
+========================== */
+
+.button-entrar {
+    width: 100%;
+    height: 45px;
+    padding: 0 14px;
+    border: none;
+    border-radius: 9px;
+    background-color: #7b4bab;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+
+    /* Mesmo cálculo de largura do input */
+    box-sizing: border-box;
+}
+
+.button-entrar:hover {
+    background-color: #63358e;
+}
+
+.button-entrar:active {
+    transform: scale(0.98);
+}
+
+
+/* ==========================
+   BOTÃO CADASTRAR
+========================== */
+
+.buttoncadastrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 45px;
+    padding: 0 14px;
+
+    border: 2px solid #7b4bab;
+    border-radius: 9px;
+    background-color: transparent;
+
+    color: #7b4bab;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: 0.2s;
+
+    /* Mesmo cálculo de largura do input */
+    box-sizing: border-box;
+}
+
+.buttoncadastrar:hover {
+    background-color: #7b4bab;
+    color: #ffffff;
+}
+
+
+/* ==========================
+   ESQUECEU A SENHA
+========================== */
+
+.esqueci-senha {
+    text-align: right;
+
+    margin-top: -8px;
+}
+
+.esqueci-senha a {
+    color: #7b4bab;
+
+    font-size: 13px;
+
+    text-decoration: none;
+}
+
+.esqueci-senha a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================
+   BOTÃO ENTRAR
+========================== */
+
+.button-entrar {
+    width: 100%;
+
+    height: 45px;
+
+    border: none;
+    border-radius: 9px;
+
+    background-color: #7b4bab;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.button-entrar:hover {
+    background-color: #63358e;
+}
+
+.button-entrar:active {
+    transform: scale(0.98);
+}
+
+
+/* ==========================
+   ÁREA DE CADASTRO
+========================== */
+
+.cadastro {
+    text-align: center;
+
+    margin-top: 25px;
+    padding-top: 22px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+.cadastro p {
+    color: #777;
+
+    font-size: 14px;
+
+    margin-bottom: 12px;
+}
+
+
+/* ==========================
+   BOTÃO CADASTRAR
+========================== */
+
+.buttoncadastrar {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 45px;
+
+    border: 2px solid #7b4bab;
+    border-radius: 9px;
+
+    background-color: transparent;
+
+    color: #7b4bab;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.buttoncadastrar:hover {
+    background-color: #7b4bab;
+
+    color: #ffffff;
+}
+
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+
+@media (max-width: 480px) {
+
+    .login-container {
+        padding: 30px 22px;
+    }
+
+    .logo-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .login-header h1 {
+        font-size: 24px;
+    }
+}
+

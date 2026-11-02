@@ -1,0 +1,27 @@
+# Configurações com segredos (nunca enviar para o GitHub)
+.env
+
+# Banco de dados local
+*.db
+
+# Fotos enviadas pelos usuários
+BackEnd/uploads/
+
+# Arquivos gerados pelo Python
+__pycache__/
+.venv/
+.pytest_cache/
+
+# Ambiente virtual Python
+.venv/
+venv/
+
+# Arquivos temporários do Python
+__pycache__/
+*.py[cod]
+
+# Banco de dados local
+*.db
+
+# Arquivos de configuração com dados secretos
+.env
